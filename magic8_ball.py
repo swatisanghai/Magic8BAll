@@ -30,31 +30,18 @@ def magic_8_ball():
         "Very doubtful."
     ]
 
-    # Choose one response from each category
-    affirmation_response = random.choice(affirmation_responses)  # Randomly select an affirmation response
-    non_committal_response = random.choice(non_committal_responses)  # Randomly select a non-committal response
-    negative_response = random.choice(negative_responses)  # Randomly select a negative response
+  # Randomly choose one response from all categories
+    all_responses = affirmation_responses + non_committal_responses + negative_responses
+    chosen_response = random.choice(all_responses)  # Randomly select a response
 
-    # Print the chosen responses
-    print(affirmation_response)  # Print the randomly selected affirmation response
-    print(non_committal_response)  # Print the randomly selected non-committal response
-    print(negative_response)  # Print the randomly selected negative response
-
-    # Repeat the process two more times to fulfill the requirement of 3 responses from each category
-    for _ in range(2):
-        affirmation_response = random.choice(affirmation_responses)  # Randomly select another affirmation response
-        non_committal_response = random.choice(non_committal_responses)  # Randomly select another non-committal response
-        negative_response = random.choice(negative_responses)  # Randomly select another negative response
-
-        print(affirmation_response)  # Print the randomly selected affirmation response
-        print(non_committal_response)  # Print the randomly selected non-committal response
-        print(negative_response)  # Print the randomly selected negative response
+    # Print the chosen response
+    print(chosen_response)  # Print the randomly selected response
 
 # Main function
 def main():
     print("Welcome to the Magic 8 Ball!")  # Print a welcome message
     question = input("Ask me a yes/no question: ")  # Prompt the user to ask a question
-    magic_8_ball()  # Call the magic_8_ball function to generate responses
+    magic_8_ball()  # Call the magic_8_ball function to generate a response
 
 if __name__ == "__main__":  # Check if the script is executed as the main program
     main()  # Call the main function to start the program
